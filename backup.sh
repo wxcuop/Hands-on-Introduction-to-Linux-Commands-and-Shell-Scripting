@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # This checks if the number of arguments is correct
 # If the number of arguments is incorrect ( $# != 2) print error message and exit
@@ -16,18 +16,19 @@ then
 fi
 
 # [TASK 1]
-targetDirectory=
-destinationDirectory=
+targetDirectory=$1
+destinationDirectory=$2
+
 
 # [TASK 2]
-echo ""
-echo ""
+echo "targetDirectory is $1"
+echo "destinationDirectory is $2"
 
 # [TASK 3]
-currentTS=``
+currentTS=$(date +%s)
 
 # [TASK 4]
-backupFileName=""
+backupFileName="backup-$currentTS.tar.gz"
 
 # We're going to:
   # 1: Go into the target directory
@@ -37,11 +38,11 @@ backupFileName=""
 # To make things easier, we will define some useful variables...
 
 # [TASK 5]
-origAbsPath=``
+origAbsPath=$(pwd)
 
 # [TASK 6]
-cd # <-
-destDirAbsPath=``
+cd $destinationDirectory
+destAbsPath=$destinationDirectory
 
 # [TASK 7]
 cd # <-
@@ -55,7 +56,7 @@ declare -a toBackup
 for file in $() # [TASK 9]
 do
   # [TASK 10]
-  if (())
+   if (())
   then
     # [TASK 11]
   fi
@@ -64,5 +65,3 @@ done
 # [TASK 12]
 
 # [TASK 13]
-
-# Congratulations! You completed the final project for this course!
