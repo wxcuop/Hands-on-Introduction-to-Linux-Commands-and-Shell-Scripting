@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # This checks if the number of arguments is correct
 # If the number of arguments is incorrect ( $# != 2) print error message and exit
@@ -18,7 +18,6 @@ fi
 # [TASK 1]
 targetDirectory=$1
 destinationDirectory=$2
-
 
 # [TASK 2]
 echo "targetDirectory is $1"
@@ -42,7 +41,7 @@ origAbsPath=$(pwd)
 
 # [TASK 6]
 cd $destinationDirectory
-destAbsPath=$destinationDirectory
+destAbsPath=$(pwd)
 
 # [TASK 7]
 cd $origAbsPath
@@ -64,5 +63,7 @@ do
 done
 
 # [TASK 12]
+tar -czvf $backupFileName ${toBackup[@]}
 
 # [TASK 13]
+mv $backupFileName $destAbsPath
